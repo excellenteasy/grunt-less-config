@@ -17,7 +17,7 @@ One the plugin has been installed, it may be enabled inside your Gruntfile with 
 grunt.loadNpmTasks('grunt-less-config');
 ```
 
-## The "less_config" task
+## The "lessConfig" task
 
 ### Options
 In your project's Gruntfile, add a section named `lessConfig` to the data object passed into `grunt.initConfig()`.
