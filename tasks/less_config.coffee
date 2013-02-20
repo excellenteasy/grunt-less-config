@@ -19,8 +19,15 @@ module.exports = (grunt) ->
 
     do (output) =>
       for file in @files
+        basePath = ''
+
+        # Changing back to the CWD
+        dirs = file.dest.split('/')
+        dirs.splice(0,dirs.length-1).forEach (dir) ->
+          basePath += '../'
+
         for path in file.src
-          output += "@import \"#{path}\";\n"
+          output += "@import \"#{basePath}#{path}\";\n"
 
         # Write the destination file.
         grunt.file.write file.dest, output
