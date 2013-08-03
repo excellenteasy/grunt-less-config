@@ -17,8 +17,8 @@ module.exports = (grunt) ->
 
     output += '\n'
 
-    do (output) =>
-      for file in @files
+    for file in @files
+      do (output, file) ->
         basePath = ''
 
         # Changing back to the CWD
