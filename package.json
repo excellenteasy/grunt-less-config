@@ -1,7 +1,7 @@
 {
   "name": "grunt-less-config",
   "description": "Pass variables to the less parser before compiling.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/excellenteasy/grunt-less-config",
   "author": {
     "name": "Stephan Bönnemann",
