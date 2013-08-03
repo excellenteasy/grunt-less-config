@@ -25,12 +25,13 @@ module.exports = (grunt) ->
         dirs = file.dest.split('/')
         dirs.splice(0,dirs.length-1).forEach (dir) ->
           basePath += '../'
-
+          
+        prepare = output
         for path in file.src
-          output += "@import \"#{basePath}#{path}\";\n"
+          prepare += "@import \"#{basePath}#{path}\";\n"
 
         # Write the destination file.
-        grunt.file.write file.dest, output
+        grunt.file.write file.dest, prepare
 
         # Print a success message.
         grunt.log.writeln "File \"" + file.dest + "\" created."
